@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+
+<html>
+<head></head>
+<body>
+
+<!-- Start -->
+<div class="camlBuilder" id="camlBuilder">
+<div>Additional Fields:</div>
+<!--Where -->
+<div id='whereID'>
+<!--Tag Unit -->
+
+<!--End Tag Unit -->
+</div>
+<!-- End Where -->
+<button onclick="globalSimpleCamlJSManager.initQuerybuilder()">start</button>
+<div id='queryResults'>
+<textarea  rows='5' id="queryTextID"></textarea >
+<button onClick="globalSimpleCamlJSManager.generateUIFromXml()" >Update Query</button>
+</div>
+</div>
+
+<!-- End -->
+<script type="text/javascript" src="camljs.js"></script>
+<script type="text/javascript">
+var fields=[{internalName:"Parent",displayName:"Parent",type:"Lookup"},
+{internalName:"Phone",displayName:"Phone",type:"Integer"},
+{internalName:"ID",displayName:"ID",type:"Count"},
+{internalName:"Title",displayName:"Title",type:"Text"},
+{internalName:"Author",displayName:"Author",type:"User"}];
+
+simpleCamlJS("whereID","queryTextID",fields);
+</script>
+
+</body>
+</html>
